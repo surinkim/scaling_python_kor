@@ -101,3 +101,9 @@ ENV/
 .mypy_cache/
 
 test.py
+
+.vscode
+Include/
+Scripts/
+pip-selfcheck.json
+tcl/
