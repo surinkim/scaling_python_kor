@@ -9,4 +9,3 @@ t = threading.Thread(target=print_something, args=("hello",))
 t.daemon = True
 t.start()
 print("thread started")
-

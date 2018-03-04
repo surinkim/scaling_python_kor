@@ -107,3 +107,5 @@ Include/
 Scripts/
 pip-selfcheck.json
 tcl/
+bin/
+include/
