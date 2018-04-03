@@ -1,0 +1,3 @@
+tests:
+- name: A test
+  GET: /api/resources/id

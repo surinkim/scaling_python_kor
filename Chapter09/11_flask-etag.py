@@ -12,7 +12,7 @@ class NotModified(werkzeug.exceptions.HTTPException):
 
 @application.route("/", methods=['GET'])
 def get_index():
-    # 이 예제는 항상 동일한 컨텐츠를 사용하므로, Etag도 고정된 값이다. 
+    # 이 예제는 항상 동일한 컨텐츠를 사용하므로, Etag도 고정된 값이다.
     ETAG = "hword"
 
     if_match = flask.request.headers.get("If-Match")

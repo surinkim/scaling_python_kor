@@ -1,0 +1,32 @@
+tests:
+  - name: GET root with If-Match match
+    GET: /
+    request_headers:
+      If-Match: hword
+    status: 200
+    response_headers:
+      ETag: hword
+
+  - name: GET root with If-Match no match
+    GET: /
+    request_headers:
+      If-Match: foobar
+    status: 304
+    response_forbidden_headers:
+      - ETag
+
+  - name: GET root with If-None-Match no match
+    GET: /
+    request_headers:
+      If-None-Match: hword
+    status: 304
+    response_forbidden_headers:
+      - ETag
+
+  - name: GET root with If-None-Match match
+    GET: /
+    request_headers:
+      If-None-Match: foobar
+    status: 200
+    response_headers:
+      ETag: hword
