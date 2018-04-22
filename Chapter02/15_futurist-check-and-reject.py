@@ -10,7 +10,7 @@ def compute():
 
 with futurist.ThreadPoolExecutor(
         max_workers=8,
-        check_and_reject=rejection.reject_when_reached(2)) as executor:
+        check_and_reject=rejection.reject_when_reached(16)) as executor:
     futures = [executor.submit(compute) for _ in range(20)]
     print(executor.statistics)
 
