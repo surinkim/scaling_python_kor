@@ -21,6 +21,7 @@ class YellEchoServer(asyncio.Protocol):
 event_loop = asyncio.get_event_loop()
 
 stats = {
+    "started at": time.time(),
     "connections": 0,
     "messages sent": 0,
 }
