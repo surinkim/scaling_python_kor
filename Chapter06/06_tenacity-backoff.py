@@ -10,7 +10,7 @@ def do_something():
 
 
 @tenacity.retry(
-wait=tenacity.wait_exponential(multiplier=0.5, max=30, exp_base=2),
+    wait=tenacity.wait_exponential(multiplier=0.5, max=30, exp_base=2),
 )
 def do_something_and_retry():
     do_something()
