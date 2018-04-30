@@ -6,7 +6,7 @@ stdout_lock = multiprocessing.Lock()
 
 
 def print_cat():
-    # 조금 기다려서 랜덤한 결과가 나오도록 한다.
+    # 조금 기다려서 임의의 결과가 나오도록 한다.
     time.sleep(0.1)
     with stdout_lock:
         print(" /\\_/\\")
