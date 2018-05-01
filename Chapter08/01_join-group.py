@@ -10,7 +10,7 @@ if len(sys.argv) != 3:
 
 # Coordinator 객체 얻음
 c = coordination.get_coordinator(
-    "memcached://localhost",
+    "etcd3://localhost",
     sys.argv[1].encode())
 # Coordinator 시작(연결 시작)
 c.start(start_heart=True)

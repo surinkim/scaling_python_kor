@@ -11,8 +11,6 @@ class URL(str):
         return self.encode()
 
 urls_to_fetch = [
-    # N 바이트를 반환한다.
-    # 여기서 바이트 수는 URL 끝의 숫자다. 
     URL("https://httpbin.org/bytes/%d" % n)
     for n in range(100)
 ]
