@@ -20,13 +20,13 @@ class Application(object):
                ConnectionResetError):
             raise AppException
 
-def retrieve_settings(self):
-    try:
-        return self.memcache.get("appsettings")
-    except (exceptions.MemcacheError,
-           ConnectionRefusedError,
-           ConnectionResetError):
-        raise AppException
+    def retrieve_settings(self):
+        try:
+            return self.memcache.get("appsettings")
+        except (exceptions.MemcacheError,
+                ConnectionRefusedError,
+                ConnectionResetError):
+            raise AppException
 
 
 class TestWithMemcached(fixtures.TestWithFixtures):
