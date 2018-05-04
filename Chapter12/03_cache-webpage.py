@@ -11,6 +11,7 @@ while True:
         print(cache[URL])
     except KeyError:
         print("Paged not cached, fetching")
-        cache[URL] = page = requests.get("http://httpbin.org/uuid")
-        print(page)
+        page = requests.get("http://httpbin.org/uuid")
+        cache[URL] = page.text
+        print(page.text)
     time.sleep(1)
