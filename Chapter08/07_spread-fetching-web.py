@@ -19,7 +19,7 @@ GROUP_NAME = b"fetcher"
 MEMBER_ID = str(uuid.uuid4()).encode('ascii')
 
 # Coordinator 객체 얻음
-c = coordination.get_coordinator("memcached://localhost", MEMBER_ID)
+c = coordination.get_coordinator("etcd3://localhost", MEMBER_ID)
 # Coordinator 시작(연결 시작)
 c.start(start_heart=True)
 
