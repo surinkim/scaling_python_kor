@@ -30,8 +30,8 @@ c.join_group(
     capabilities={"mood": sys.argv[3]}
 ).get()
 
-# 멤버 목록과 캐퍼빌리티를 출력한다.
-# API가 비동기 방식이므로, 캐퍼빌리티를 얻기 위한 요청을
+# 멤버 목록과 역량을 출력한다.
+# API가 비동기 방식이므로, 역량을 얻기 위한 요청을
 # 동시에 보내서 병렬로 실행되도록 한다.
 get_capabilities = [
     (member, c.get_member_capabilities(group, member))
